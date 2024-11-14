@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_DB: dbcars  # Tên cơ sở dữ liệu bạn muốn tạo
+      POSTGRES_USER: postgres        # Tên người dùng
+      POSTGRES_PASSWORD: 18032004         # Mật khẩu cho người dùng
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
